@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Escolar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema Escolar</h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="btn-dashboard">Dashboard</a></li>
+                <li><a href="#" id="btn-professor">Professores</a></li>
+                <li><a href="#" id="btn-aluno">Alunos</a></li>
+                <li><a href="#" id="btn-turma">Turmas</a></li>
+                <li><a href="#" id="btn-disciplina">Disciplinas</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="dashboard" aria-hidden="false">
+            <h2>Dashboard</h2>
+            <p>Bem-vindo ao painel principal do sistema escolar!</p>
+        </section>
+        
+        <section id="professores" class="hidden">
+            <h2>Professores</h2>
+    <form id="form-professor">
+        <fieldset>
+            <legend>Adicionar/Editar Professor</legend>
+            <label for="id_professor">ID:</label>
+            <input type="text" id="id_professor" name="id_professor" readonly>
+            
+            <label for="nome_professor">Nome:</label>
+            <input type="text" id="nome_professor" name="nome_professor" required>
+            
+            <label for="email_professor">E-mail:</label>
+            <input type="email" id="email_professor" name="email_professor" required>
+            
+            <label for="especialidade">Especialidade:</label>
+            <input type="text" id="especialidade" name="especialidade">
+            
+            <button type="submit">Salvar</button>
+        </fieldset>
+    </form>
+
+    <h3>Lista de Professores</h3>
+    <table id="tabela-professores">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Especialidade</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dados dos professores serão inseridos aqui via JavaScript -->
+        </tbody>
+    </table>
+        </section>
+
+        <section id="alunos" class="hidden">
+            <h2>Alunos</h2>
+    <form id="form-aluno">
+        <fieldset>
+            <legend>Adicionar/Editar Aluno</legend>
+            <label for="id_aluno">ID:</label>
+            <input type="text" id="id_aluno" name="id_aluno" readonly>
+            
+            <label for="nome_aluno">Nome:</label>
+            <input type="text" id="nome_aluno" name="nome_aluno" required>
+            
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento" required>
+            
+            <label for="email_aluno">E-mail:</label>
+            <input type="email" id="email_aluno" name="email_aluno" required>
+            
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="rua" name="rua" placeholder="Rua">
+            <input type="text" id="numero" name="numero" placeholder="Número">
+            <input type="text" id="bairro" name="bairro" placeholder="Bairro">
+            <input type="text" id="cidade" name="cidade" placeholder="Cidade">
+            
+            <button type="submit">Salvar</button>
+        </fieldset>
+    </form>
+
+    <h3>Lista de Alunos</h3>
+    <table id="tabela-alunos">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Data de Nascimento</th>
+                <th>E-mail</th>
+                <th>Endereço</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dados dos alunos serão inseridos aqui via JavaScript -->
+        </tbody>
+    </table>
+        </section>
+
+        <section id="turmas" class="hidden">
+            <h2>Turmas</h2>
+    <form id="form-turma">
+        <fieldset>
+            <legend>Adicionar/Editar Turma</legend>
+            <label for="id_turma">ID:</label>
+            <input type="text" id="id_turma" name="id_turma" readonly>
+            
+            <label for="ano">Ano:</label>
+            <input type="number" id="ano" name="ano" required>
+            
+            <label for="semestre">Semestre:</label>
+            <input type="number" id="semestre" name="semestre" required>
+            
+            <label for="turno">Turno:</label>
+            <input type="text" id="turno" name="turno">
+            
+            <button type="submit">Salvar</button>
+        </fieldset>
+    </form>
+
+    <h3>Lista de Turmas</h3>
+    <table id="tabela-turmas">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Ano</th>
+                <th>Semestre</th>
+                <th>Turno</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dados das turmas serão inseridos aqui via JavaScript -->
+        </tbody>
+    </table>
+        </section>
+        
+        <section id="disciplinas" class="hidden">
+            <h2>Disciplinas</h2>
+    <form id="form-disciplina">
+        <fieldset>
+            <legend>Adicionar/Editar Disciplina</legend>
+            <label for="id_disciplina">ID:</label>
+            <input type="text" id="id_disciplina" name="id_disciplina" readonly>
+            
+            <label for="nome_disciplina">Nome da Disciplina:</label>
+            <input type="text" id="nome_disciplina" name="nome_disciplina" required>
+            
+            <button type="submit">Salvar</button>
+        </fieldset>
+    </form>
+
+    <h3>Lista de Disciplinas</h3>
+    <table id="tabela-disciplinas">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome da Disciplina</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dados das disciplinas serão inseridos aqui via JavaScript -->
+        </tbody>
+    </table>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Sistema Escolar</p>
+    </footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>
