@@ -49,5 +49,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Mostrar o dashboard por padrão
-    showSection('dashboard');
+    showSection('professores');
 });
